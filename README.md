@@ -19,6 +19,13 @@ THEN I am able to successfully create, update, and delete data in my database<br
 - Express.js
 - Sequelize
 
-
 ## Screencastify Turtorial
 https://drive.google.com/file/d/107-RLT3g5uxtUflrZaGfRTeyWgVRz5A3/view
+
+## Deployed Heorku Website
+To https://git.heroku.com/murmuring-island-72329.git
+
+## Set Up
+```
+git clone git@github.com:AidanGuarniere/fantastic-umbrella.git
+```
