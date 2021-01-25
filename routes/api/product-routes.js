@@ -51,11 +51,17 @@ router.get("/:id", (req, res) => {
       },
     ],
   })
-    .then((dbProductData) => res.json(dbProductData))
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+  .then((dbProductData) => {
+    if (!dbProductData) {
+      res.status(404).json({ message: "No Product found with this id" });
+      return;
+    }
+    res.json(dbProductData);
+  })
+  .catch((err) => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 // create new product
