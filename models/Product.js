@@ -18,9 +18,6 @@ Product.init(
     product_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        lens:[1],
-      },
     },
     price: {
       type: DataTypes.DECIMAL,
@@ -28,6 +25,13 @@ Product.init(
       validate: {
         isDecimal: true,
       },
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        isInt: true,
+      }
     },
     // foreign key
     category_id: {
